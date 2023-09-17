@@ -4,6 +4,7 @@ metadata:
   labels:
     app: doris-test
   name: doris-test
+  namespace: doris-jenkins-argocd
 spec:
   replicas: 1
   selector:
@@ -24,7 +25,7 @@ metadata:
   labels:
     app: doris-test
   name: doris-test
-  namespace: default
+  namespace: doris-jenkins-argocd
 spec:
   ports:
   - port: 80
