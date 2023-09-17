@@ -15,7 +15,7 @@ spec:
         app: doris-test
     spec:
       containers:
-      - image: doris/testing-argocicd:TAG
+      - image: dorisfebrianda93/testing-argocicd:TAG
         name: doris-test
 ---
 apiVersion: v1
