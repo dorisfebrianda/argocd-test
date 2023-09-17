@@ -17,3 +17,19 @@ spec:
       containers:
       - image: doris/testing-argocicd:TAG
         name: doris-test
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: doris-test
+  name: doris-test
+  namespace: default
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: doris-test
+  type: ClusterIP
