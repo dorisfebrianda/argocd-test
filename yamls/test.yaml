@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: doris-test
+  name: doris-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: doris-test
+  template:
+    metadata:
+      labels:
+        app: doris-test
+    spec:
+      containers:
+      - image: doris/testing-argocicd:TAG
+        name: doris-test
